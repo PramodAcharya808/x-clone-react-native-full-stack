@@ -12,8 +12,8 @@ const userRoutes = express.Router();
 
 userRoutes.get("/profile/:email", getUserProfile);
 userRoutes.put("/profile/update", jwtCheck, updateProfile);
-userRoutes.put("/oauth/sync", jwtCheck, syncUserData);
-userRoutes.put("/me", jwtCheck, getCurrentUser);
-userRoutes.put("/followUser/:targetUserId", jwtCheck, followUser);
+userRoutes.post("/oauth/sync", jwtCheck, syncUserData);
+userRoutes.post("/me", jwtCheck, getCurrentUser);
+userRoutes.post("/followUser/:targetUserId", jwtCheck, followUser);
 
 export default userRoutes;
