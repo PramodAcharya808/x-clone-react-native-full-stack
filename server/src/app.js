@@ -9,7 +9,6 @@ import { arcjetMiddleware } from "./middleware/arcjet.middleware.js";
 
 const app = express();
 
-// global middlewares
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
